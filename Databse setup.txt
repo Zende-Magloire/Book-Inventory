@@ -1,0 +1,33 @@
+Books
+{
+    book_id (Primary Key)
+    title
+    genre_id (Foreign Key referencing Genres)
+    author_id (Foreign Key referencing Authors)
+    publication_year
+    is_read
+    isbn
+    rating
+}
+
+Authors
+{
+    author_id (Primary Key)
+    name
+}
+
+Genres
+{
+    genre_id (Primary Key)
+    name
+}
+
+Book_Loans
+{
+    loan_id (Primary Key)
+    book_id (Foreign Key referencing Books)
+    borrower_name
+    loan_date
+    return_date
+    returned (Boolean)
+}
